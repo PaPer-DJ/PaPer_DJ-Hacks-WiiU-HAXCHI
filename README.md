@@ -3,6 +3,7 @@ Guía y Recursos para Hackear la Wii U - Instalar Custom Firmware basado en Cold
 
 Esto es un Fork y Recopilación de recursos de: 
 * https://wiiu.hacks.guide/es_ES/
+* https://wiiu.hacks.guide/es_ES/vwii-modding
 ----------------------------------------------------------------
 
 Lectura requerida
