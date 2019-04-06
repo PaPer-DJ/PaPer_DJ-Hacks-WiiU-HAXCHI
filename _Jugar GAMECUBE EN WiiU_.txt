@@ -2,6 +2,8 @@ Instrucciones para jugar a GmeCube desde el propio TabletoMando de la WiiU
 
 https://www.elotrolado.net/hilo_jugar-a-juegos-de-gamecube-mediante-nintendont-y-el-wii-u-gamepad_2250085
 
+https://wii.scenebeta.com/noticia/nintendont
+
 ------------------------------------------------------------
 
 Como sabéis, ya es posible inyectar juegos de Wii en la consola virtual de Wii U. El proceso está explicado en este hilo hilo_wii-on-wii-u-virtual-console-injecting-games_2247553. Además de los juegos de Wii, también es posible inyectar homebrew de Wii. Concretamente, y en lo que concierne a este hilo, es posible inyectar un forwarder de Nintendont para que arranque la aplicación situada en la SD o, si lo preferimos, también es posible empaquetar la propia aplicación en el canal obteniendo el mismo resultado. La idea es que, al arrancar un juego de GameCube mediante Nintendont cargado de esta manera, se pueden usar los controles del Wii U gamepad.
