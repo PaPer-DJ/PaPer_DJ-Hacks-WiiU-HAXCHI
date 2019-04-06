@@ -1,0 +1,56 @@
+﻿Instrucciones para jugar a GmeCube desde el propio TabletoMando de la WiiU
+
+https://www.elotrolado.net/hilo_jugar-a-juegos-de-gamecube-mediante-nintendont-y-el-wii-u-gamepad_2250085
+
+------------------------------------------------------------
+
+Como sabéis, ya es posible inyectar juegos de Wii en la consola virtual de Wii U. El proceso está explicado en este hilo hilo_wii-on-wii-u-virtual-console-injecting-games_2247553. Además de los juegos de Wii, también es posible inyectar homebrew de Wii. Concretamente, y en lo que concierne a este hilo, es posible inyectar un forwarder de Nintendont para que arranque la aplicación situada en la SD o, si lo preferimos, también es posible empaquetar la propia aplicación en el canal obteniendo el mismo resultado. La idea es que, al arrancar un juego de GameCube mediante Nintendont cargado de esta manera, se pueden usar los controles del Wii U gamepad.
+
+Imagen
+
+He abierto este hilo para evitar offtopics en el hilo que comentaba antes e intentar tratar ambos temas por separado. Yo mismo he podido comprobar que funciona y actualmente llevo más de tres horas jugadas con el Wii U gamepad y el juego Metal Gear Solid: The Twin Snakes (amén de varios soles en Super Mario Sunshine) con cero problemas. A decir verdad, no cree yo mismo el canal siguiendo el precedimiento que se explica en el otro hilo sino que encontré uno creado por un usuario de gbatemp pero el caso es que funciona. El mensaje del que lo saqué es éste. En el propio mensaje hay un enlace al canal pero os lo pongo aquí. Moderación y yo entendemos que, al ser un canal vacío con un forwarder, no contiene código con copyright y es por eso que enlazo el canal. Si se confirmara que sí lo contiene, lo borraría inmediatamente.
+
+He encontrado otro canal forwarder de Nintendont que incluye el sonido de arranque de la Gamecube.
+Lo podéis bajar de aquí. Actualmente es el que uso yo.
+
+Para quien quiera hacerlo por sí mismo, el usuario JuananBow ha actualizado el tutorial de la Wiki explicando cómo se inyecta Nintendont y un juego de GameCube. Es un anejo dentro de la sección Inyección de un juego de Wii. Parte 1: Adaptar la imagen ISO wiki/Inyectar_ROMS_de_Wii_en_la_Consola_Virtual_de_WiiU#Parte_1:_Adaptar_la_imagen_.iso
+
+Una vez creado o conseguido el canal la idea es la siguiente:
+
+1- Arrancamos Mocha o lo que utilicemos para instalar código sin firmar en la Wii U.
+
+2- Instalamos el canal con WupInstaller.
+
+3- Si el canal es un forwarder, en la tarjeta SD habrá de estar previamente guardada la aplicación Nintendont en la ruta SD:/apps/Nintendont/boot.dol. Se recomienda bajar la última versión de aquí. No olvidéis renombrar el archivo loader.dol a boot.dol antes de meterlo en su carpeta.
+
+4- Los juegos deberán estar en una carpeta llamada "games" situada en el directorio raíz de la tarjeta SD. Además, cada juego deberá llamarse game.iso y tener su propia subcarpeta. Por ejemplo, si tenemos el juego Pikmin 2 en formato .iso antes de nada deberemos renombrarlo "game.iso" y lo podríamos guardar así (en lugar de Pikmin 2, podemos darle a la última carpeta el nombre que queramos):
+
+SD:/games/Pikmin 2/game.iso.
+
+Si el juego consta de dos discos, el segundo disco deberá llamarse "disc2.iso" y estar situado junto con la iso del primer juego (game.iso). Por ejemplo, el juego Metal Gear Solid - The Twin Snakes consta de dos discos y una forma de guardarlo sería:
+
+SD:/games/Metal Gear Solid - The Twin Snakes/game.iso (primer disco del juego)
+SD:/games/Metal Gear Solid - The Twin Snakes/disc2.iso (segundo disco del juego)
+
+5- Cada vez que vayamos a ejecutar el canal y, por ende, Nintendont cargado de esta manera, tendremos que tener Mocha en marcha de antemano.
+
+6- Utilizamos y cargamos Nintendont como de costumbre con la diferencia de que, y esto es de lo que se trataba, podremos jugar desde el propio Wii U gamepad y utilizar sus botones.
+
+Otra serie de consideraciones:
+
+[*] De momento, sólo es posible cargar los juegos desde la SD pero es posible que FIX94 implemente la carga por USB en el futuro. Nintendont nos dará la opción de cargar juegos por USB pero si lo hemos cargado mediante este canal, ya sabéis, escoged la tarjeta SD.
+
+[*] Las partidas se guardarán en la siguiente ruta SD:/saves pero para ello deberemos escoger la opción Memcard emulation On en la configuración de Nintendont.
+
+[*] El usuario JuananBow confirma que ya es posible usar wiimotes y el mando pro de la wii U junto con el Wii U gamepad (en general, no es posible utilizar mandos de GC y el Wii U gamepad a la vez).
+
+[*] Si no queremos utilizar el Wii U gamepad para jugar y en su lugar preferimos mandos GC con el adaptador, gamepads pros o wiimotes, hay que hacer lo siguiente: cuando carguemos Nintendont desde el canal nos aparecerá, como siempre, el mensaje que dice "Este programa es compatible con el Wii U GamePad. ¿Quieres utilizar el GamePad? No podrás cambiar de mando durante la partida". Pues bien, respondemos que NO (si elegimos que sí, podríamos utilizar el Wii U GamePad con sus botones pero no el mando de GC) y tendremos que sincronizar/encender un mando de Wii (hace falta tener la barra sensora) y elegir en pantalla con el wiimote dónde queremos que se muestren las imágenes. A partir de ahí, una vez que cargue Nintendont, podemos usar mandos de GC, incluído el propio juego pero no podremos utilizar el Wii U gamePad nada más que para ver la imagen, si así lo hemos elegido. Para salir al menú, en este caso, hay que pulsar brevemente el botón Power de la consola.
+
+[*] Los gatillos del Wii U gamepad no son analógicos pero si mantenemos pulsado el botón L y luego apretamos el botón ZR, obtendremos el mismo resultado que cuando pulsamos ligeramente en gatillo R en el mando de GameCube; importante en juegos como Super Mario Sunshine para poder echar agua y andar a la vez.
+
+[*] Las últimas versiones de Nintendont ya no se bloquean con este método al pulsar el botón Home sino que nos mandará al menú de Wii U.
+
+[*] Para cambiar de juego hay que salir al menú del sistema pulsando el botón Home, cargar Mocha y volver a cargar el canal de Nintendont.
+
+[*] Para actualizar Nintendont podemos hacerlo manualmente (descargarlo desde el ordenador y pasarlo a la SD) o podemos acceder a Nintendont desde el Homebrew Channel en la vWii y actualizar con la propia aplicación (requiere conexión a Internet) pero, de momento, no es posible actualizar desde Nintendont, si lo cargamos mediante este canal (dará error y tendremos que apagar la consola por las bravas).
+© 2019 GitHub, Inc.
